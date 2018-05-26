@@ -47,8 +47,9 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+			<!--
 			<plugin>
-				<!-- Add/update this in tomcat-home/conf/tomcat-users.xml file
+				 Add/update this in tomcat-home/conf/tomcat-users.xml file
 					<role rolename="manager-gui"/>
 					<user username="tomcat" password="s3cret" roles="admin,tomcat,manager-gui,manager-script"/>
 					Run the maven goal tomcat7:deploy to deploy your war package to tomcat server.
@@ -63,8 +64,8 @@
 					<username>tomcat</username>
 					<password>s3cret</password>
 				</configuration>
-				-->
 			</plugin>
+			-->
 		</plugins>
 	</build>
 	<!--<repositories>
