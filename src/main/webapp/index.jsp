@@ -2,8 +2,10 @@
 <body>
 <h2>Hello, DevOps World!!!</h2>
 <br/>
-<h3>Find the DevOps Tolls list below. NEw changes</h3>
-  <h4>new changes</h4>
+<h3>Find the DevOps <font color=red>Tools</font> list below.</h3>
+  
+  <font color=green size=5>  <h4> new change </h4> </font>
+  
   
   <table width="59%" border="1">
     <tr><th colspan="3">Various Tools which are suporting to DevOps</th></tr>
