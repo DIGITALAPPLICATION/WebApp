@@ -6,7 +6,8 @@
   <h4>new changes</h4>
   
   <table width="59%" border="1">
-    <tr><td>S.No.</td><td>Type</td><td>Tool Name</td></tr>
+    <tr><th colspan="3">Various Tools which are suporting to DevOps</th></tr>
+	<tr><td>S.No.</td><td>Type</td><td>Tool Name</td></tr>
     <tr><td>1</td><td>Build Tools</td><td>Java: Ant with ivy, Maven, Gradle etc. || .net: NAnt, MS-Build etc.</td></tr>
     <tr><td>2</td><td>Version Control(i.e., code repository) tools</td><td>SVN, GitHub, Bitbucket, GitLab, RTC, TFS, Gerrit etc.</td></tr>
     <tr><td>3</td><td>CI/CD tools</td><td>Jenkins and other similar popular tools TeamCity, Bamboo etc.</td></tr>
@@ -21,8 +22,26 @@
     <tr><td>12</td><td>Containarizartion tools</td><td>Docker, Kubernetes, Vagrant, CoreOS and rkt, Apache Mesos and Mesosphere,Open Container Initiative (OCI), Panamax etc.</td></tr>
   </table>
   
-  <br/> <br/> <br/> <br/> <br/> <br/>
+  <br/> <br/> <br/>
+  <table width="59%" border="1">
+    <tr><th colspan="3">Tools in our training</th></tr>
+	<tr><td>S.No.</td><td>Type</td><td>Tool Name</td></tr>
+    <tr><td>1</td><td>Build Tools</td><td>Java:Maven</td></tr>
+    <tr><td>2</td><td>Version Control(i.e., code repository) tools</td><td>GitHub</td></tr>
+    <tr><td>3</td><td>CI/CD tools</td><td>Jenkins</td></tr>
+    <tr><td>4</td><td>Remote repositories</td><td>nexus</td></tr>
+    <tr><td>5</td><td>Scripting/Programming</td><td>Important Linux commands and Shell Script</td></tr>
+    <tr><td>6</td><td>Application Servers</td><td>TomCat</td></tr>
+    <tr><td>7</td><td>Code-qality Tools</td><td>SonarQuebe etc.</td></tr>
+    <tr><td>8</td><td>Issue/Project management</td><td>JIRA, Confluence</td></tr>
+    <tr><td>9</td><td>Cloud Management portals</td><td>AWS</td></tr>
+    <tr><td>10</td><td>Configuration management Tools</td><td>ANSIBLE</td></tr>
+    <tr><td>11</td><td>Monitoring tools</td><td>NAGIOS</td></tr>
+    <tr><td>12</td><td>Containarizartion tools</td><td>Docker</td></tr>
+  </table>
+  <br/> <br/> <br/>
   Click <a href="sample.html">here</a> to go to sample.html page.
-  <br/> <br/> <br/> <br/> <br/> <br/>
+  <br/> <br/> <br/> 
+  <a href=training.html>Go To Training Page</a><br/><br/><br/><br/>
 </body>
 </html>
