@@ -8,7 +8,7 @@
 
 	<properties>
 		<project.scm.id>github</project.scm.id>
-		<github.global.server>github</github.global.server>
+		<!-- <github.global.server>github</github.global.server> -->
 	</properties>
 	<scm>
 		<url>https://github.com/DIGITALAPPLICATION/DevOpsWebApp.git</url>
