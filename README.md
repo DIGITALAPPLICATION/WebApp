@@ -4,7 +4,7 @@ mvn clean test
 
 mvn clean install
 
-mvn tomcat:deploy
+mvn tomcat7:deploy (Make sure tomcat server is online)
 
 mvn checkstyle:checkstyle checkstyle:check
 
