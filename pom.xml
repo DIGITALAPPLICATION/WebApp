@@ -9,6 +9,7 @@
 	<properties>
 		<project.scm.id>github</project.scm.id>
 		<!-- <github.global.server>github</github.global.server> -->
+		<!-- <argLine>-XX:MaxPermSize=512m</argLine> -->
 	</properties>
 	<scm>
 		<url>https://github.com/DIGITALAPPLICATION/DevOpsWebApp.git</url>
@@ -20,13 +21,35 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>2.5</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}-${project.version}</finalName>
 		<plugins>
+			<!--
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
@@ -47,12 +70,12 @@
 					</dependency>
 				</dependencies>
 			</plugin>
-			<!--
+			-->
 			<plugin>
-				 Add/update this in tomcat-home/conf/tomcat-users.xml file
+				 <!-- Add/update this in tomcat-home/conf/tomcat-users.xml file
 					<role rolename="manager-gui"/>
 					<user username="tomcat" password="s3cret" roles="admin,tomcat,manager-gui,manager-script"/>
-					Run the maven goal tomcat7:deploy to deploy your war package to tomcat server.
+					Run the maven goal tomcat7:deploy to deploy your war package to tomcat server. -->
 				
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
@@ -65,16 +88,17 @@
 					<password>s3cret</password>
 				</configuration>
 			</plugin>
-			-->
 		</plugins>
 	</build>
-	<!--<repositories>
+	<!--
+	<repositories>
 		<repository>
 			<id>nexus</id>
 			<name>libs-release</name>
 			<url>http://18.218.88.137:8081/nexus/content/artifactory/libs-release</url>
 		</repository>
-	</repositories>-->
+	</repositories>
+	-->
 	<distributionManagement>
 		<repository>
 			<id>deployment</id>
@@ -101,6 +125,75 @@
 				<!-- SERVER ON A REMOTE HOST -->
 				<sonar.host.url>http://${sonarServer}:9000</sonar.host.url>
 			</properties>
+		</profile>
+		<profile>
+			<id>jacoco</id>
+			<!-- https://www.jacoco.org/jacoco/ -->
+			<!-- https://github.com/pkainulainen/maven-examples -->
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+						<version>0.7.5.201505241946</version>
+						<configuration>
+							<systemPropertyVariables>
+								<jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+							</systemPropertyVariables>
+						</configuration>
+						<executions>
+							<execution>
+								<id>prepare-agent</id>
+								<goals>
+									<goal>prepare-agent</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>report</id>
+								<phase>prepare-package</phase>
+								<goals>
+									<goal>report</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>post-unit-test</id>
+								<phase>test</phase>
+								<goals>
+									<goal>report</goal>
+								</goals>
+								<configuration>
+									<!-- Sets the path to the file which contains the execution data. -->
+
+									<dataFile>target/jacoco.exec</dataFile>
+									<!-- Sets the output directory for the code coverage report. -->
+									<outputDirectory>target/jacoco-ut</outputDirectory>
+								</configuration>
+							</execution>
+							<execution>
+								<id>jacoco-check</id>
+								<phase>test</phase>
+								<goals>
+									<goal>check</goal>
+								</goals>
+								<configuration>
+									<rules>
+										<rule>
+											<element>PACKAGE</element>
+											<limits>
+												<limit>
+													<counter>CLASS</counter>
+													<value>COVEREDRATIO</value>
+													<minimum>0.50</minimum>
+												</limit>
+											</limits>
+										</rule>
+									</rules>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
 </project>

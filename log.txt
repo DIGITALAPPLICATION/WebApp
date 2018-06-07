@@ -1,0 +1,23 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.devops.devopswebapp:DevOpsWebApp >----------------
+[INFO] Building DevOpsWebApp-1.0.0-SNAPSHOT 1.0.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ DevOpsWebApp ---
+[INFO] Deleting C:\Users\venkata.reddy.sykam\Documents\Selenium\DevOpsWebApp\target
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.0.0:checkstyle (default-cli) @ DevOpsWebApp ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.335 s
+[INFO] Finished at: 2018-06-07T15:55:03+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-checkstyle-plugin:3.0.0:checkstyle (default-cli) on project DevOpsWebApp: An error has occurred in Checkstyle report generation.: Failed during checkstyle execution: Failed during checkstyle configuration: unable to parse configuration stream - Element type "html" must be declared.:8:17 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
