@@ -1,5 +1,7 @@
 # DevOpsWebApp
 
+mvn clean package
+
 mvn clean test
 
 mvn clean install
