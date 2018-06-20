@@ -4,7 +4,7 @@
 	</head>
 	<body align=center>
 		<h2>Hello, DevOps World!!!</h2>
-		<h3>Find the DevOps Tools list below.</h3>
+		<h3>Find the <font color=red>DevOps Tools</font> list below.</h3>
 		<a href=LoginPage.html >Login</a>
 		<br/><br/>
 		Click <a href="sample.html">here</a> to go to sample.html page.
