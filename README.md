@@ -2,6 +2,8 @@
 
 mvn clean package
 
+mvn clean verify
+
 mvn clean test
 
 mvn clean install
