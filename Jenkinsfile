@@ -21,5 +21,59 @@ pipeline {
         }
       }
     }
+    stage('deploy') {
+      parallel {
+        stage('deploy') {
+          steps {
+            timeout(time: 1, activity: true) {
+              echo 'hello world'
+              echo 'namaste world'
+              echo 'Hiii Hello'
+            }
+
+            echo 'adab india'
+          }
+        }
+        stage('parallel-deploy') {
+          steps {
+            retry(count: 3) {
+              echo 'hello child'
+            }
+
+          }
+        }
+      }
+    }
+    stage('test') {
+      parallel {
+        stage('test') {
+          steps {
+            build 'afterbackup'
+          }
+        }
+        stage('parallel-test') {
+          steps {
+            catchError()
+            sleep(time: 1, unit: 'MINUTES')
+          }
+        }
+      }
+    }
+    stage('stage') {
+      parallel {
+        stage('stage') {
+          steps {
+            pwd(tmp: true)
+            isUnix()
+          }
+        }
+        stage('prallel-stage') {
+          steps {
+            fileExists 'Jenkinsfile'
+            input(message: 'Please enter your valid input', id: 'InputId', submitter: 'venkt')
+          }
+        }
+      }
+    }
   }
 }
