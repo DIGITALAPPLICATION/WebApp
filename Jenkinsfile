@@ -53,7 +53,6 @@ pipeline {
         }
         stage('parallel-test') {
           steps {
-            catchError()
             sleep(time: 1, unit: 'MINUTES')
           }
         }
