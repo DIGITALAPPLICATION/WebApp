@@ -69,7 +69,7 @@ pipeline {
         stage('prallel-stage') {
           steps {
             fileExists 'Jenkinsfile'
-            input(message: 'Please enter your valid input', id: 'InputId', submitter: 'venkt')
+            input(message: 'Please enter your valid input', id: 'InputId', submitter: 'devops2018')
           }
         }
       }
