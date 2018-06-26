@@ -1,6 +1,6 @@
 #Known Maven Build Errors
 
-### 1. could not find dependency: (any phase)
+### 1. Could not transfer artifact:
         -----------------------------
         [INFO] ------------------------------------------------------------------------
         [INFO] BUILD FAILURE
@@ -10,8 +10,11 @@
         [INFO] ------------------------------------------------------------------------
         [ERROR] Failed to execute goal org.apache.maven.plugins:maven-checkstyle-plugin:3.0.0:checkstyle (default-cli) on project Addition: Execution default-cli of goal org.apache.maven.plugins:maven-checkstyle-plugin:3.0.0:checkstyle failed: Plugin org.apache.maven.plugins:maven-checkstyle-plugin:3.0.0 or one of its dependencies could not be resolved: Could not transfer artifact antlr:antlr:jar:2.7.7 from/to central (https://repo.maven.apache.org/maven2): GET request of: antlr/antlr/2.7.7/antlr-2.7.7.jar from central failed: Connection reset -> [Help 1]
 
+### 2. could not find artifact Or Could not resolve dependencies:
+        ---------------------------
+        [ERROR] Failed to execute goal on project DevOpsWebSite: Could not resolve dependencies for project com.devops.devopswebapps:DevOpsWebSite:war:3.0.0-SNAPSHOT: Could not find artifact com.devops.devopswebapps:DevOpsWebSite-core:jar:3.0.0-SNAPSHOT
 
-### 2. Compilation errors: mvn compile
+### 3. Compilation errors: mvn compile
 
 
         [INFO] -------------------------------------------------------------
@@ -34,7 +37,7 @@
         [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project DevOpsWebApp: Compilation failure: Compilation failure:
 
 
-### 3. testCompilation error: mvn test  (testCompile)
+### 4. testCompilation error: mvn test  (testCompile)
 
         [ERROR] COMPILATION ERROR :
         [INFO] -------------------------------------------------------------
@@ -56,7 +59,8 @@
         [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project DevOpsWebApp: Compilation failure: Compilation failure:
 
 
-### 4. test case failures: mvn test (surefire test)
+
+### 5. test case failures: mvn test (surefire test)
 
         Results :
 
@@ -75,7 +79,7 @@
         [ERROR] Please refer to C:\Users\mycomputer\Documents\Selenium\DevOpsWebApp\target\surefire-reports for the individual test results.
 
 
-### 5. checkstyle errors: mvn checkstyle:checkstyle checkstyle:check
+### 6. checkstyle errors: mvn checkstyle:checkstyle checkstyle:check
 
         [ERROR] src\main\java\WelcomeServlet.java:[22] (regexp) RegexpSingleline: Line has trailing spaces.
         [INFO] ------------------------------------------------------------------------
@@ -87,7 +91,7 @@
         [ERROR] Failed to execute goal org.apache.maven.plugins:maven-checkstyle-plugin:3.0.0:check (default-cli) on project DevOpsWebApp: You have 108 Checkstyle violations. -> [Help 1]
 
 
-### 6. coverage failure: (jacoco)
+### 7. coverage failure: (jacoco)
 
         [INFO] --- jacoco-maven-plugin:0.7.5.201505241946:check (jacoco-check) @ DevOpsWebApp ---
         [INFO] Analyzed bundle 'DevOpsWebApp-1.0.0-SNAPSHOT' with 2 classes
@@ -100,7 +104,7 @@
         [INFO] ------------------------------------------------------------------------
         [ERROR] Failed to execute goal org.jacoco:jacoco-maven-plugin:0.7.5.201505241946:check (jacoco-check) on project DevOpsWebApp: Coverage checks have not been met. See log for details. -> [Help 1]
 
-### 7. Server offline/access issue: error code 401: (while deploy to any server)
+### 8. Server offline/access issue: error code 401: (while deploy to any server)
 
         [ERROR] Tomcat return http status error: 401, Reason Phrase: Invalid password/token for user: tomcat
         [INFO] ------------------------------------------------------------------------
@@ -111,7 +115,7 @@
         [INFO] ------------------------------------------------------------------------
         [ERROR] Failed to execute goal org.apache.tomcat.maven:tomcat7-maven-plugin:2.2:deploy (default-cli) on project WebApp: Tomcat return http status error: 401, Reason Phrase: Invalid password/token for user: tomcat:  -> [Help 1]
 
-### 8. No proper permissions on the server: error code 403: (while deploy to any server)
+### 9. No proper permissions on the server: error code 403: (while deploy to any server)
 
         [ERROR] Tomcat return http status error: 403, Reason Phrase: Forbidden
         [INFO] ------------------------------------------------------------------------
@@ -123,7 +127,7 @@
         [ERROR] Failed to execute goal org.apache.tomcat.maven:tomcat7-maven-plugin:2.2:deploy (default-cli) on project WebApp: Tomcat return http status error: 403, Reason Phrase: Forbidden: <!DOCTYP
         <title>403 Access Denied</title>
 
-### 9. Jacoco Config error:
+### 10. Jacoco Config error:
         -------------------------------------------------------
          T E S T S
         -------------------------------------------------------
@@ -141,6 +145,15 @@
         [INFO] ------------------------------------------------------------------------
         [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project DevOpsWebApp: Execution default-test of goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test failed: The forked VM terminated without saying properly goodbye. VM crash or System.exit called ? -> [Help 1]
         
+### 10. pom.xml Config error:  Non-parseable POM  
         
-        
+        [INFO] Scanning for projects...
+        [ERROR] [ERROR] Some problems were encountered while processing the POMs:
+        [FATAL] Non-parseable POM C:\Users\SVNReddy\Documents\Selenium\GitHubRepos\DevOpsWebApps2\pom.xml: expected > to finsh end tag not < from line 9 (position: TEXT seen ...</module>\n\t</modules\n\n\t<... @14:3)  @ line 14, column 3
+         @
+        [ERROR] The build could not read 1 project -> [Help 1]
+        [ERROR]
+        [ERROR]   The project  (C:\Users\SVNReddy\Documents\Selenium\GitHubRepos\DevOpsWebApps2\pom.xml) has 1 error
+        [ERROR]     Non-parseable POM C:\Users\SVNReddy\Documents\Selenium\GitHubRepos\DevOpsWebApps2\pom.xml: expected > to finsh end tag not < from line 9 (position: TEXT seen ...</module>\n\t</modules\n\n\t<... @14:3)  @ line 14, column 3 -> [Help 2]
+
         
