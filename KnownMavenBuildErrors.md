@@ -14,7 +14,7 @@
         ---------------------------
         [ERROR] Failed to execute goal on project DevOpsWebSite: Could not resolve dependencies for project com.devops.devopswebapps:DevOpsWebSite:war:3.0.0-SNAPSHOT: Could not find artifact com.devops.devopswebapps:DevOpsWebSite-core:jar:3.0.0-SNAPSHOT
 
-### 3. Compilation errors: mvn compile
+### 3. Compilation errors: mvn compile: Compilation failure / COMPILATION ERROR
 
 
         [INFO] -------------------------------------------------------------
@@ -37,7 +37,7 @@
         [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project DevOpsWebApp: Compilation failure: Compilation failure:
 
 
-### 4. testCompilation error: mvn test  (testCompile)
+### 4. testCompilation error: mvn test  (testCompile): COMPILATION ERROR
 
         [ERROR] COMPILATION ERROR :
         [INFO] -------------------------------------------------------------
@@ -60,7 +60,7 @@
 
 
 
-### 5. test case failures: mvn test (surefire test)
+### 5. test case failures: mvn test (surefire test): There are test failures
 
         Results :
 
@@ -79,7 +79,7 @@
         [ERROR] Please refer to C:\Users\mycomputer\Documents\Selenium\DevOpsWebApp\target\surefire-reports for the individual test results.
 
 
-### 6. checkstyle errors: mvn checkstyle:checkstyle checkstyle:check
+### 6. checkstyle errors: mvn checkstyle:checkstyle checkstyle:check: Checkstyle violations
 
         [ERROR] src\main\java\WelcomeServlet.java:[22] (regexp) RegexpSingleline: Line has trailing spaces.
         [INFO] ------------------------------------------------------------------------
@@ -91,7 +91,7 @@
         [ERROR] Failed to execute goal org.apache.maven.plugins:maven-checkstyle-plugin:3.0.0:check (default-cli) on project DevOpsWebApp: You have 108 Checkstyle violations. -> [Help 1]
 
 
-### 7. coverage failure: (jacoco)
+### 7. coverage failure: (jacoco) : Coverage checks have not been met
 
         [INFO] --- jacoco-maven-plugin:0.7.5.201505241946:check (jacoco-check) @ DevOpsWebApp ---
         [INFO] Analyzed bundle 'DevOpsWebApp-1.0.0-SNAPSHOT' with 2 classes
@@ -127,7 +127,7 @@
         [ERROR] Failed to execute goal org.apache.tomcat.maven:tomcat7-maven-plugin:2.2:deploy (default-cli) on project WebApp: Tomcat return http status error: 403, Reason Phrase: Forbidden: <!DOCTYP
         <title>403 Access Denied</title>
 
-### 10. Jacoco Config error:
+### 10. Jacoco Config error: The forked VM terminated without saying properly goodbye
         -------------------------------------------------------
          T E S T S
         -------------------------------------------------------
