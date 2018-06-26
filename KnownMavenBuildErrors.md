@@ -1,4 +1,4 @@
-# Known Maven Build Errors
+# Known Maven Build issues
 
 ### 1. Could not transfer artifact:
         -----------------------------
