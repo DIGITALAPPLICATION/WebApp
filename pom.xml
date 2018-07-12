@@ -3,7 +3,7 @@
 	<groupId>com.devops.devopswebapp</groupId>
 	<artifactId>DevOpsWebApp</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0-RC-2</version>
 	<name>${project.artifactId}-${project.version}</name>
 
 	<properties>
@@ -15,7 +15,7 @@
 		<url>https://github.com/venkatasykam/DevOpsWebApp.git</url>
 		<connection>scm:git:https://github.com/venkatasykam/DevOpsWebApp.git</connection>
 		<developerConnection>scm:git:https://github.com/venkatasykam/DevOpsWebApp.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>master-DevOpsWebApp-1.0.0-RC-2</tag>
 	</scm>
 	<dependencies>
 		<dependency>
@@ -71,8 +71,8 @@
 			</plugin>
 			<plugin>
 				 <!-- Add/update this in tomcat-home/conf/tomcat-users.xml file
-					<role rolename="manager-gui"/>
-					<user username="tomcat" password="s3cret" roles="admin,tomcat,manager-gui,manager-script"/>
+					<role rolename="manager-gui" />
+					<user username="tomcat" password="s3cret" roles="admin,tomcat,manager-gui,manager-script" />
 					Run the maven goal tomcat7:deploy to deploy your war package to tomcat server. -->
 				
 				<groupId>org.apache.tomcat.maven</groupId>
