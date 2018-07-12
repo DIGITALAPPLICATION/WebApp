@@ -12,9 +12,9 @@
 		<!-- <argLine>-XX:MaxPermSize=512m</argLine> -->
 	</properties>
 	<scm>
-		<url>https://github.com/DIGITALAPPLICATION/DevOpsWebApp.git</url>
-		<connection>scm:git:https://github.com/DIGITALAPPLICATION/DevOpsWebApp.git</connection>
-		<developerConnection>scm:git:https://github.com/DIGITALAPPLICATION/DevOpsWebApp.git</developerConnection>
+		<url>https://github.com/venkatasykam/DevOpsWebApp.git</url>
+		<connection>scm:git:https://github.com/venkatasykam/DevOpsWebApp.git</connection>
+		<developerConnection>scm:git:https://github.com/venkatasykam/DevOpsWebApp.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	<dependencies>
