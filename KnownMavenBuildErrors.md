@@ -157,3 +157,24 @@
         [ERROR]     Non-parseable POM C:\Users\SVNReddy\Documents\Selenium\GitHubRepos\DevOpsWebApps2\pom.xml: expected > to finsh end tag not < from line 9 (position: TEXT seen ...</module>\n\t</modules\n\n\t<... @14:3)  @ line 14, column 3 -> [Help 2]
 
         
+### 11. Maven release build known issues
+
+1. Maven integration plugin - installeted in jenkins
+
+2. add credentils in jenkins
+
+3. Path setup in jenkins - Global tool conmfig
+
+-V clean release:prepare release:perform -Dtag=${gitBranch}-DevOpsWebapp-${releaseVersion} -DreleaseVersion=${releaseVersion} -DdevelopmentVersion=${nextDevelopmentVersion} -Dusername=${gitUname} -Dpassword=${gitPwd}
+
+release:prepare - mvn clean verify
+
+release:perform - mvn deploy
+
+
+4. Mask Passwords plugin - install in jenkins
+
+5. Configure SCM as to checkout the branch to local machine/workspace.
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-release-plugin:2.5.3:prepare (default-cli) on project DevOpsWebApp: An error is occurred in the checkin process: Exception while executing SCM command. Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+
+6. check the option "Delete workspace..." fron Build Env
