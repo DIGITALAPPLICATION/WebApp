@@ -101,12 +101,12 @@
 		<repository>
 			<id>deployment</id>
 			<name>Nexus Release Repository</name>
-			<url>http://174.129.63.62:8081/nexus/content/repositories/releases/</url>
+			<url>http://35.173.178.21:8081/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>deployment</id>
 			<name>Nexus Snapshots Repository</name>
-			<url>http://174.129.63.62:8081/nexus/content/repositories/snapshots/</url>
+			<url>http://35.173.178.21:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 	<profiles>
