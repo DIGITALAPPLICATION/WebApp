@@ -178,3 +178,24 @@ release:perform - mvn deploy
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-release-plugin:2.5.3:prepare (default-cli) on project DevOpsWebApp: An error is occurred in the checkin process: Exception while executing SCM command. Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
 6. check the option "Delete workspace..." fron Build Env
+
+
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-release-plugin:2.5.3:prepare (default-cli) on project DevOpsWebApp: You don't have a SNAPSHOT project in the reactor projects list. -> [Help 1]
+
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-release-plugin:2.5.3:prepare (default-cli) on project DevOpsWebApp: Unable to tag SCM
+[ERROR] Provider message:
+[ERROR] The git-tag command failed.
+[ERROR] Command output:
+[ERROR] fatal: tag 'master-WebApp-1.0.0-RC-4' already exists
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-release-plugin:2.5.3:prepare (default-cli) on project DevOpsWebApp: Unable to tag SCM
+[ERROR] Provider message:
+[ERROR] The git-tag command failed.
+[ERROR] Command output:
+[ERROR] fatal: tag 'master-WebApp-1.0.0-RC-1' already exists
+
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-release-plugin:2.5.3:prepare (default-cli) on project DevOpsWebApp: An error is occurred in the checkin process: Exception while executing SCM command. Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref 
