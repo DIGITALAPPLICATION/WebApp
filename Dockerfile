@@ -1,3 +1,2 @@
-FROM tomcat:7-jre8
-ADD target/DevOpsWebApp-*.war /usr/local/tomcat/webapps/
-ADD tomcat-users.xml /usr/local/tomcat/conf/
+FROM maven:3.3.3-jdk-8
+RUN apt-get install git -y
