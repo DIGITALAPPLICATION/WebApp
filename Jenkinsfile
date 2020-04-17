@@ -1,5 +1,5 @@
 library 'my-shared-library'
 
 buildmyapp (
-  buidVersion: '1.0.0'
+  buidVersion: '2.0.0'
 )
