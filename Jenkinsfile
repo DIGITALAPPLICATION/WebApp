@@ -8,4 +8,5 @@ buildmyapp.build (
   buidVersion: '2.0.0'
 )
 
+build()
 
