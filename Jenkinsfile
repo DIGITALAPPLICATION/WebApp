@@ -13,3 +13,4 @@ build(
   buidVersion: "1.0.${BUILD_NUMBER}"
 )
 
+deploy()
