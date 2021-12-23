@@ -9,5 +9,7 @@ buildmyapp.build (
   buidVersion: '2.0.0'
 )
 
-build()
+build(
+  buidVersion: "1.0.${BUILD_NUMBER}"
+)
 
